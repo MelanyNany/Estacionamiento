@@ -1,0 +1,7 @@
+:root {
+  --main: #e3e3f1;
+  --menu: -webkit-radial-gradient(200px top, ellipse, white,#1162ac , black);
+  --letters: #0f5492;
+  --elements: #ffffff;
+    --logo: url('../images/logo1.png');
+}

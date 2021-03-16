@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Principal</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Estacionamiento">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/solid.min.css">
+	<link rel="shortcut icon" type="image/x-icon" href="">
+</head>
+
+<script type="text/javascript" src="js/clock.js"></script>
+<script type="text/javascript" src="js/indicadores.js"></script>
+
+<script type="text/javascript" src="js/conexion.js"></script>
+
+<script type="text/javascript" src="js/push.js"></script>
+
+<body onload="startTime();">
+	<div class="container-cuadro">
+		<nav class="sidebar-navigation">
+			<ul>
+				<li class="active">
+					<i class="fa fa-cog" onclick="location.href='tema.html'"></i>
+					<span class="tooltip "></span>
+				</li>
+				<li>
+					<i class="fa fa-wifi parpadea" onclick="conexion()" id="wifi"></i>
+					<span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-plus-circle"></i>
+					<span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-sync-alt"></i>
+					<span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-power-off"></i>
+					<span class="tooltip"></span>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="title">
+			<h1>SORIANA</h1>
+			<h2>Tepalcapa </h2>
+		</div>
+
+
+		<div class="anuncio">
+			<div class="text-anun" id="mensaje">
+				<h3 id="text1"> ¡Bienvenido! </h3>
+				<h3 id="text2"> Presione el botón </h3>
+				<img id="text3" class="boton-r" src="images/boton.png">
+			</div>
+
+		</div>
+
+
+		<div class="logo-circle">
+			<img src="images/">
+
+		</div>
+
+		<div class="clockdate">
+			<h1 id="clock"></h1>
+			<h2 id="date"></h2>
+
+		</div>
+		<div class="ticket">
+			<h1 id="folio">1</h1>
+
+		</div>
+		<div id="indicadores" class="indica">
+
+			<span>
+				<span class="status online" id="boton-pres" title="Boton"></span>
+
+			</span>
+
+			<span>
+				<span class="status wait" id="presen" title="Presencia"></span>
+
+			</span>
+			<span>
+				<span class="status offline" id="retor" title="Retorno"></span>
+
+			</span>
+
+		</div>
+
+		<div class="indica">
+			<input type="button" name="btnrj" id="boton-rojo" value="Boton simulado"
+				onclick="escribir();BotonRojo(this);DetenerHora();conexion()" />
+
+		</div>
+	</div>
+
+	</div>
+
+</body>
+
+
+</html>

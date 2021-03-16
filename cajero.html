@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Pago</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Estacionamiento">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsiveCaja.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="">
+
+</head>
+
+
+<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/solid.min.css">
+<script src="sweet/sweetalert2.all.min.js"></script>
+<script type="text/javascript" src="js/conexion.js"></script>
+
+<script type="text/javascript" src="js/clock.js"></script>
+<script type="text/javascript" src="js/caja.js"></script>
+
+<script type="text/javascript" src="js/push.js"></script>
+<header>
+
+
+</header>
+
+<body onload="startTime();">
+	<div class="container-cuadro">
+		<nav class="sidebar-navigation">
+			<ul>
+				<li class="active">
+					<i class="fa fa-cog" onclick="location.href='tema.html'"></i>
+					<span class="tooltip "></span>
+				</li>
+				<li>
+					<i class="fa fa-wifi parpadea" onclick="conexion()" id="wifi"></i><span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-plus-circle"></i>
+					<span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-sync-alt"></i>
+					<span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-power-off"></i>
+					<span class="tooltip"></span>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="title">
+			<h1>SORIANA</h1>
+			<h2>Tepalcapa </h2>
+		</div>
+		<div class="dinero">
+			<div id="billetes" class="bills">
+
+				<span class="bill">
+					<img src="images/20.png" class="bill intermitente">
+
+				</span>
+
+				<span class="bill">
+					<img src="images/50.png" class="bill intermitente">
+
+
+				</span>
+				<span class="bill">
+					<img src="images/100.png" class="bill intermitente">
+
+
+				</span>
+
+			</div>
+			<div id="monedas" class="coins">
+
+				<span class="coin">
+					<img src="images/1p.png" class="coin intermitente">
+
+				</span>
+
+				<span class="coin">
+					<img src="images/2p.png" class="coin intermitente">
+
+
+				</span>
+				<span class="coin">
+					<img src="images/5p.png" class="coin intermitente">
+
+
+				</span>
+				<span class="coin">
+					<img src="images/10p.png" class="coin intermitente">
+
+
+				</span>
+
+			</div>
+
+		</div>
+
+		<div class="costos">
+			<p id="tarifa" style="display:none">5</p>
+		</div>
+		<div class="tarifa">
+			<h2> Tarifa </h2>
+			<h2>
+				Las 2 primeras horas $5 con boleto sellado
+				Hora o fraccion adicional $10
+			</h2>
+		</div>
+
+		<div class="anuncio">
+			<div class="text-anun row" id="mensaje">
+				<div class="pagar parpadea">
+					<h3>$<h3 id="total">0</h3>
+					</h3><br>
+					<h3 id="total2">TOTAL</h3>
+				</div>
+
+				<!--<div class="deposito parpadea">
+					<h3>$<h3 id="dinero-dep">0</h3></h3><br>
+					<h3 style="font-size: 12px"> DEPOSITADO </h3>					
+				</div>-->
+				<div class="text-anun" id="mensaje">
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<div class="logo-circle">
+			<img src="images/">
+
+		</div>
+
+		<div class="clock">
+			<div class="clockin">
+				<i class="fas fa-chevron-up" style="color: green"></i>
+				<h1 class="anun-2">HORA DE ENTRADA</h1>
+				<h1 id="clockin">9:32:46</h1>
+
+			</div>
+			<div class="clockin">
+				<img src="images/cartime.png" class="image-2">
+				<h1 class="anun-2">TIEMPO TOTAL</h1>
+				<h1 id="time">00:00:00</h1>
+
+			</div>
+			<div class="clockin">
+				<i class="fas fa-chevron-down " style="color: red"></i>
+				<h1 class="anun-2">HORA DE SALIDA</h1>
+				<h1 id="clock"></h1>
+
+			</div>
+
+		</div>
+		<div style="position: absolute; top: 550px">
+			<div>
+				Simulado de total a pagar <br>
+				<button onclick="Total()">Calcular</button>
+			</div>
+			<div>
+				Simulado de entrada de dinero <br>
+				<input type="number" id="depositado" onchange="Cajero(this.value);">
+				<!--<button onclick="Cajero()">depositar</button>-->
+			</div>
+		</div>
+		<div class="cancel">
+
+			<img src="images/cancelar.png" onclick="Cancelar()" id="cancelar">
+
+		</div>
+
+	</div>
+
+	</div>
+
+</body>
+
+
+</html>

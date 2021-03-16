@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Principal</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Estacionamiento">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="">
+
+</head>
+<!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>-->
+
+
+<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/solid.min.css">
+<script src="sweet/sweetalert2.all.min.js"></script>
+
+<script type="text/javascript" src="js/clock.js"></script>
+<script type="text/javascript" src="js/caja.js"></script>
+<script type="text/javascript" src="js/conexion.js"></script>
+
+<script type="text/javascript" src="js/push.js"></script>
+<header>
+
+
+</header>
+
+<body onload="startTime();">
+	<div class="container-cuadro">
+		<nav class="sidebar-navigation">
+			<ul>
+				<li class="active">
+					<i class="fa fa-cog" onclick="location.href='tema.html'"></i>
+					<span class="tooltip "></span>
+				</li>
+				<li>
+					<i class="fa fa-wifi parpadea" onclick="conexion()" id="wifi"></i><span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-plus-circle"></i>
+					<span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-sync-alt"></i>
+					<span class="tooltip"></span>
+				</li>
+				<li>
+					<i class="fa fa-power-off"></i>
+					<span class="tooltip"></span>
+				</li>
+			</ul>
+		</nav>
+
+		<div class="title">
+			<h1>SORIANA</h1>
+			<h2>Tepalcapa </h2>
+		</div>
+
+
+		<div class="anuncio">
+			<div class="text-anun" id="mensaje">
+				<h3 id="text1"> ¡Bienvenido! </h3>
+				<h3 id="text2"> Escanee el codigo </h3>
+				<img id="text3" class="codig" src="images/qr_icono.png">
+			</div>
+
+		</div>
+
+
+		<div class="logo-circle">
+			<img src="images/">
+
+		</div>
+
+		<div class="clockdate">
+			<h1 id="clock"></h1>
+			<h2 id="date"></h2>
+
+		</div>
+
+		<div>
+			<input type="button" name="btnrj" id="boton-rojo" value="Boton simulado"
+				onclick="location.href='cajero.html'" />
+		</div>
+
+	</div>
+
+	</div>
+
+</body>
+
+
+</html>

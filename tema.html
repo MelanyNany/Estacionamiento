@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>tema</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Estacionamiento">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+  <link rel="shortcut icon" type="image/x-icon" href="">
+  <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/solid.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="">
+
+</head>
+
+
+<script type="text/javascript" src="js/clock.js"></script>
+
+<script type="text/javascript" src="js/conexion.js"></script>
+
+<script type="text/javascript" src="js/push.js"></script>
+<script type="text/javascript" src="js/color.js"></script>
+
+<script type="text/javascript" src="js/color2.js"></script>
+<script type="text/javascript" src="js/ocultar.js"></script>
+
+<body onload="Color2()">
+  <div class="container-cuadro">
+
+    <nav class="sidebar-navigation">
+      <ul>
+        <li class="active">
+          <i class="fa fa-cog" onclick="location.href='tema.html'"></i>
+          <span class="tooltip "></span>
+        </li>
+        <li>
+          <i class="fa fa-wifi parpadea" onclick="conexion()" id="wifi"></i> <span class="tooltip"></span>
+        </li>
+        <li>
+          <i class="fa fa-plus-circle"></i>
+          <span class="tooltip"></span>
+        </li>
+        <li>
+          <i class="fa fa-sync-alt"></i>
+          <span class="tooltip"></span>
+        </li>
+        <li>
+          <i class="fa fa-power-off"></i>
+          <span class="tooltip"></span>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="title">
+      <h1>SORIANA</h1>
+      <h2>Tepalcapa </h2>
+      <br>
+      <h2 id="Tcolores">Escoger Colores</h2>
+    </div>
+
+
+
+    <div class="anuncio" align="center"> <br>
+
+
+      <form enctype='multipart/form-data' action='models/color.php' method='post'>
+
+        <main id='ocultar-y-mostrar'>
+          <table class="space">
+            <input type="color" name="colorF" id="colorF" value="#e3e3f1" class="colores">
+            <input type="color" name="colorL" id="colorL" value="#0f5492" class="colores">
+            <input type="color" name="colorE" id="colorE" value="#ffffff" class="colores">
+            <input type="color" name="colorM" id="colorM" value="#1162ac" class="colores">
+
+            </tr>
+            <tr>
+              <td ALIGN="center" class="td1">Color de fondo</td>
+              <td ALIGN="center" class="td1"> Color de letras </td>
+              <td ALIGN="center" class="td1"> Color de elementos</td>
+              <td ALIGN="center" class="td1"> Color de menu </td>
+            </tr>
+
+          </table>
+        </main>
+
+        <input type="submit" value="Guardar" name="Guardar" id="Guardar" class="btn-success">
+
+
+        <input type="submit" value="Predeterminado" name="Preder" class="btn-primary">
+
+      </form>
+    </div>
+
+
+
+    <div class="logo-circle">
+      <img src="images/">
+
+    </div>
+
+    <div align="center">
+
+
+      <button id='ocultar-mostrar' class="btn-dark">Escoger logo</button>
+
+      <div id="tema-logo" class="logo-tem">
+        <tr>
+          <form enctype='multipart/form-data' action='models/foto.php' method='post'>
+            <td><input type="txt" name="nomar" value="logo" size="50" style="display:none;"></td>
+            <div class="upload-btn-wrapper">
+              <button class="btn"> <i class="fas fa-cloud-upload-alt"></i>Subir Archivo</button>
+              <input name='uploadedfile' type='file' class="subir">
+            </div>
+
+
+            <td><input type='submit' value='Subir Logo' name="Guardar" class="sub-logo" id="subLogo"></td>
+          </form>
+        </tr>
+
+      </div>
+
+
+      <nav class="nav">
+        <a href="index.html"><img src="images/regresa.png"></a>
+
+      </nav>
+    </div>
+    </main>
+
+
+
+</body>
+
+</html>
